@@ -1,0 +1,225 @@
+:root {
+   --dark_mode: #000;
+   --bg-siguenos:  #F7F7F7;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+body{
+   font-family:  'Quicksand', Sans-serif;
+}
+
+.content {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em;
+}
+
+.logo {
+   text-align: center;
+   font-size: 3em;
+}
+
+.logo span {
+   color: #B70E21;
+}
+
+.content-wrapper {
+   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.content-wrapper > * {
+   padding: 1em;
+}
+
+.contact-form {
+   color: #000;
+}
+
+
+.contact-form form {
+   display: grid;
+   grid-template-columns: 1fr 1fr; /* 2 columnas en el form*/
+}
+
+.contact-form form .block {
+   grid-column: 1 / 3; /* abrca una sola franja*/
+}
+
+.contact-form form p {
+   margin: 0;
+   padding: 1em;
+}
+
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+   width: 100%;
+   padding: .7em;
+   border: none;
+   background: none;
+   outline: none;
+   color: #000;
+   border-bottom: 1px solid #F9BC01;
+}
+
+
+
+.contact-form form button {
+   background: #F9BC01;
+   color: black;
+   border: none;
+   text-transform: uppercase;
+   padding: 1em;
+}
+.contact-form form button:hover,
+.contact-form form button:focus {
+   background: #d6af30;
+   color: #000;
+   transition: background-color 1s ease-out;
+   outline: none;
+}
+
+.contact-info {
+   background: #000;
+   color: #fff;
+}
+
+.contact-info h4,
+.contact-info ul,
+.contact-info p {
+   text-align: center;
+   margin: 0 0 1rem 0;
+}
+
+.contact-info ul {
+   list-style: none;
+   padding: 0;
+}
+
+.contact-info ul li {
+   padding: .3em;
+}
+
+
+/* pantalla grande */
+@media (min-width: 700px){
+   body {
+      padding: 0 4 rem;
+   }
+
+   .content-wrapper {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+   }
+
+   .content-wrapper > *{
+      padding: 2em;
+   }
+
+   .contact-info h4,
+   .contact-info ul,
+   .contact-info p {
+      padding: 1em;
+      text-align: left;
+   }
+}
+
+
+
+.bg-ig-dark{
+   color: black;
+}
+
+.bg-ig-dark:hover{
+   opacity: 1;
+}
+
+.bg-dark-mode{
+   background-color: var(--dark_mode);
+}
+
+.bg-siguenos {
+  background-color: var(--bg-siguenos);
+}
+
+.text-dark-mode{
+   color: black;
+}
+
+.flex{
+   display: flex;
+   justify-content: center;
+   align-items: stretch;
+}
+
+.envios {
+   font-size: 15px;
+}
+
+.nav-primero {
+   font-size: 15px;
+   
+}
+
+.nav-primero:hover{
+   color: #F9BC01;
+}
+
+.btnBuscar {
+   outline: none;
+}
+
+.btnBuscar:hover {
+   color: #F9BC01;
+}
+
+.siguenos-ig {
+   color: #000;
+}
+
+.btnproductos {
+   border: none;
+}
+
+
+.footer {
+   font-size: 15px;
+}
+
+
+.appWhatsapp {
+   position: fixed; /* posicion fija en toda la pagina*/
+   right: 26px; /*distancia*/
+   bottom: 50px; /*parte inferior*/
+   width: 60px;
+   z-index: 1000; /*se sobrepono sobre los demas, sobre las demas imagenes*/
+}
+
+
+.appWhatsapp img{
+   width: 100%;
+   height: auto;
+}
+
+
+.button-label {
+   
+   position: absolute;
+   top: 50%;
+   transform: translate(-115%);
+   color: #1e2433;
+   background-color: #fff;
+   border-radius: 8px;
+   padding: 10px 15px;
+   white-space: nowrap;
+   margin: 0 15px;
+   font-size: 14px;
+   line-height: 1.2;
+   box-shadow: 0 6px 32px 0 rgb(0 18 46 / 24%);
+   transition: margin 0.16s linear 0s, opacity 0.08s linear 0s;
+}
