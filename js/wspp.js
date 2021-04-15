@@ -1,4 +1,5 @@
- const enviar  =  document.querySelector('#enviar');
+ console.log('hola');
+const enviar  =  document.querySelector('#enviar');
  const formulario  = document.querySelector('#formulario');
 
  enviar.addEventListener('click',function(e){
