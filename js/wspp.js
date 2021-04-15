@@ -1,19 +1,28 @@
+ const enviar  =  document.querySelector('#enviar');
+ const formulario  = document.querySelector('#formulario');
+
+ enviar.addEventListener('click',function(e){
+     e.preventDefault();
+     console.log('diste click');
+     sendEmail();
+ })
 
 
-document.querySelector('#submit').addEventListener('click', function(e){
-    e.preventDefault();
+ function sendEmail(params) {
+    var tempParams = {
+        nombre: document.getElementById("nombre").value,
+        email: document.getElementById("email").value,
+        celular: document.getElementById("celular").value,
+        asunto: document.getElementById("asunto").value,
+        mensaje: document.getElementById("mensaje").value,
+    };
 
+    emailjs.send('service_7f92o5p','template_uskg3gu',tempParams)
+     .then(function(res){
+        swal("¡Estamos para ayudarte!", "Recuerda que protegemos tus datos", "success");
+        formulario.reset();
+     })
     
-    let formulario =  document.querySelector('#formulario');
-    let nombre = document.querySelector('#nombre').value;
-    let email = document.querySelector('#email').value;
-    let celular = document.querySelector('#celular').value;
-    let asunto = document.querySelector('#asunto').value;
-    let mensaje = document.querySelector('#mensaje').value ? swal("¡Estamos para ayudarte!", "Recuerda que protegemos tus datos", "success") :  swal("¡Completa todos los campos!", "Es obligatorio", "error");
+}
 
-    let url = "https://api.whatsapp.com/send?phone=(+51)915393257&text=*Norte Inti | Palo Santo - Contacto  Página Web*%0A%0A*1.-¿Cual es tu nombre?* " + nombre + "%0A*2.-Email:* " + email + "%0A*3.-Asunto:* " + asunto + "%0A*4.-Mensaje :* " + mensaje; 
-  
-    formulario.reset();
 
-    window.open(url);
-})
